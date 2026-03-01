@@ -1,14 +1,12 @@
-# NSFW Model 
+# 3DW-NSFW model
 
-Contains files for benchmarking, testing and fine tuning the model.
+This repo contains the source code used to benchmark, fine tune, and host the 3D Western Morrissette Maker Space NSFW AI detection model.
 
-# Setup
+# Setup 
 
-Requirements: have uv installed.
+Requirements: `uv` installed and Bash for running benchmarking scripts (Windows developers can use WSL).
 
-1. clone the repo
-2. set up the repo by running `uv venv`
-3. run `uv sync`
-4. run `jupyter notebook` to see all notebooks
+To set up for a specific benchmarking, fine tuning or hosting, `cd` into the directory in this monorepo, 
+and run `uv venv && source .venv/bin/activate && uv pip install -r requirements.txt`.
 
-DVC will be setup later.
+Please refer to the corresponding directories' READMEs for more.

@@ -20,15 +20,15 @@ We use a curated, multi file per sample dataset of 3D models scraped from Thingi
 - Images using [OpenSCAD](https://github.com/HasNate618/OpenScad-STL-Renderer)
 - Text generated via our data pipeline 
 
-We push the data image and text pairs to a S3 bucket, see [Storage Strategy](#Storage Strategy) for more details.
+We push the data image and text pairs to a S3 bucket, see [Storage Strategy](#storage-strategy) for more details.
 
-### 2. Benchmarking Pipeline 
+### 2. Benchmarking Pipeline + Strategy Overview 
 
 We will not use Wandb for the time being and make assumptions on inference hyperparameters such as `do_sample`, `max_new_token`, `temperature`, and `torch_dtype` for floating point precisions, for standardized evaluation. However, this is subject to discussion. The benchmarking pipeline will:
 
 - Run Python scripts using flags specified in a Bash script
 - Pull data from S3 according to the flags 
-- Batch requests and query remote API or run inference using the models locally.
+- Batch requests and query remote API or run inference using the models on EC2.
 
 Whether we do remote API calls or rent an EC2 instance to load model weights and benchmark is dependent on model availability and pricing. Subject to discussion.
 
@@ -39,6 +39,8 @@ Proposed/draft inference hyperparameters:
 - `max_new_tokens`: Set a fixed limit to reduce cost and wordiness for easier evals.
 
 NOTE: If a specific model's documentation explicitly states it requires a certain prompt template or a specific `repetition_penalty` to function correctly, we need to apply those model-specific requirements while keeping the core generation logic (greedy vs. sampling) the same.
+
+**We will additionally test quantized versions of the same models listed below, to verify that quantization will fit our business needs equally well compared to the full precision counterpart.**
 
 ### Our Test Dataset
 
