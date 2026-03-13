@@ -1,0 +1,25 @@
+{
+  "sample_id": "battery_box_2_aa",
+  "model": "google/gemini-2.0-flash-001",
+  "parsed": {
+    "title": "Twisted Quadruple Battery Holder",
+    "description": "Battery holder for four AA batteries.  The batteries are arranged in a twisted layout for fun.  It has mounting holes for screws or whatever. Let me know if you remix it!",
+    "tags": [
+      "battery",
+      "holder",
+      "AA",
+      "twist",
+      "mount",
+      "electronics",
+      "remixable"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Twisted Quadruple Battery Holder\",\n  \"description\": \"Battery holder for four AA batteries.  The batteries are arranged in a twisted layout for fun.  It has mounting holes for screws or whatever. Let me know if you remix it!\",\n  \"tags\": [\"battery\", \"holder\", \"AA\", \"twist\", \"mount\", \"electronics\", \"remixable\"]\n}\n```",
+  "usage": {
+    "input_tokens": 1122,
+    "output_tokens": 93,
+    "latency_s": 1.66
+  },
+  "num_images": 4,
+  "error": null
+}

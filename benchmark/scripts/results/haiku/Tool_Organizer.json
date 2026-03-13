@@ -1,0 +1,24 @@
+{
+  "sample_id": "Tool_Organizer",
+  "model": "anthropic/claude-3-haiku",
+  "parsed": {
+    "title": "Sleek and Modern Sculpture",
+    "description": "This 3D model is a striking abstract sculpture with a minimalist, modern design. The smooth, flowing lines and dark, monochromatic color create a bold, eye-catching piece that would make a great addition to any contemporary space. It has a simple yet elegant form that would look fantastic printed in high-quality 3D material.",
+    "tags": [
+      "abstract",
+      "sculpture",
+      "modern",
+      "minimalist",
+      "contemporary art",
+      "3D print"
+    ]
+  },
+  "raw_response": "{\n  \"title\": \"Sleek and Modern Sculpture\",\n  \"description\": \"This 3D model is a striking abstract sculpture with a minimalist, modern design. The smooth, flowing lines and dark, monochromatic color create a bold, eye-catching piece that would make a great addition to any contemporary space. It has a simple yet elegant form that would look fantastic printed in high-quality 3D material.\",\n  \"tags\": [\"abstract\", \"sculpture\", \"modern\", \"minimalist\", \"contemporary art\", \"3D print\"]\n}",
+  "usage": {
+    "input_tokens": 2668,
+    "output_tokens": 124,
+    "latency_s": 4.44
+  },
+  "num_images": 4,
+  "error": null
+}

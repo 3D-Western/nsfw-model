@@ -1,0 +1,26 @@
+{
+  "sample_id": "HelloKitty",
+  "model": "google/gemini-2.0-flash-001",
+  "parsed": {
+    "title": "Chess Pawn - Simple",
+    "description": "My first attempt at modeling a chess piece!  Just a basic pawn for now.  Hoping to print a full set at some point, so any feedback is welcome.  Think I might refine the details a bit more... maybe round off the head slightly.  Not sure how the curves will come out on my printer but we'll see!",
+    "tags": [
+      "chess",
+      "pawn",
+      "game",
+      "boardgame",
+      "modeling",
+      "3dprint",
+      "beginner",
+      "simple"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Chess Pawn - Simple\",\n  \"description\": \"My first attempt at modeling a chess piece!  Just a basic pawn for now.  Hoping to print a full set at some point, so any feedback is welcome.  Think I might refine the details a bit more... maybe round off the head slightly.  Not sure how the curves will come out on my printer but we'll see!\",\n  \"tags\": [\"chess\", \"pawn\", \"game\", \"boardgame\", \"modeling\", \"3dprint\", \"beginner\", \"simple\"]\n}\n```",
+  "usage": {
+    "input_tokens": 1122,
+    "output_tokens": 129,
+    "latency_s": 1.97
+  },
+  "num_images": 4,
+  "error": null
+}

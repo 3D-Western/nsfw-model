@@ -1,0 +1,24 @@
+{
+  "sample_id": "Tool_Organizer",
+  "model": "openai/gpt-4o-mini",
+  "parsed": {
+    "title": "Simple Geometric Planter",
+    "description": "Just a basic geometric planter I whipped up for my succulents. It's got clean lines and a nice modern vibe. Perfect for small plants or a bit of d\u00e9cor on your desk. Design is easy to print and doesn't take up too much filament.",
+    "tags": [
+      "planter",
+      "geometric",
+      "succulent holder",
+      "home decor",
+      "desk accessory",
+      "easy print"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Simple Geometric Planter\",\n  \"description\": \"Just a basic geometric planter I whipped up for my succulents. It's got clean lines and a nice modern vibe. Perfect for small plants or a bit of d\u00e9cor on your desk. Design is easy to print and doesn't take up too much filament.\",\n  \"tags\": [\"planter\", \"geometric\", \"succulent holder\", \"home decor\", \"desk accessory\", \"easy print\"]\n}\n```",
+  "usage": {
+    "input_tokens": 102100,
+    "output_tokens": 101,
+    "latency_s": 2.5
+  },
+  "num_images": 4,
+  "error": null
+}

@@ -1,0 +1,23 @@
+{
+  "sample_id": "HelloKitty",
+  "model": "openai/gpt-4o-mini",
+  "parsed": {
+    "title": "Cool Abstract Sculpture",
+    "description": "Just finished this abstract sculpture inspired by modern art. Thought it would look awesome as a centerpiece. Can't wait to see how it prints! It's got some interesting shapes and angles.",
+    "tags": [
+      "abstract",
+      "sculpture",
+      "art",
+      "3D print",
+      "modern"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Cool Abstract Sculpture\",\n  \"description\": \"Just finished this abstract sculpture inspired by modern art. Thought it would look awesome as a centerpiece. Can't wait to see how it prints! It's got some interesting shapes and angles.\",\n  \"tags\": [\"abstract\", \"sculpture\", \"art\", \"3D print\", \"modern\"]\n}\n```",
+  "usage": {
+    "input_tokens": 102100,
+    "output_tokens": 78,
+    "latency_s": 2.61
+  },
+  "num_images": 4,
+  "error": null
+}

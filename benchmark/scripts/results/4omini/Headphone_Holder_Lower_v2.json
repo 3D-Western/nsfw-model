@@ -1,0 +1,24 @@
+{
+  "sample_id": "Headphone_Holder_Lower_v2",
+  "model": "openai/gpt-4o-mini",
+  "parsed": {
+    "title": "Stylized Dragon Figurine",
+    "description": "Here's a cool dragon model I designed! It's a bit stylized with sharp edges and a sleek look. Perfect for tabletop games or just to display on your shelf. I'll probably print it in a vibrant color, but it also looks great in classic dragon hues!",
+    "tags": [
+      "dragon",
+      "figurine",
+      "tabletop",
+      "fantasy",
+      "3Dprint",
+      "stylized"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Stylized Dragon Figurine\",\n  \"description\": \"Here's a cool dragon model I designed! It's a bit stylized with sharp edges and a sleek look. Perfect for tabletop games or just to display on your shelf. I'll probably print it in a vibrant color, but it also looks great in classic dragon hues!\",\n  \"tags\": [\"dragon\", \"figurine\", \"tabletop\", \"fantasy\", \"3Dprint\", \"stylized\"]\n}\n```",
+  "usage": {
+    "input_tokens": 102100,
+    "output_tokens": 102,
+    "latency_s": 2.51
+  },
+  "num_images": 4,
+  "error": null
+}

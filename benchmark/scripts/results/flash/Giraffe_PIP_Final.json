@@ -1,0 +1,24 @@
+{
+  "sample_id": "Giraffe_PIP_Final",
+  "model": "google/gemini-2.0-flash-001",
+  "parsed": {
+    "title": "Plain black background",
+    "description": "This is just a plain black background for use with machine learning. I use it for negative examples.",
+    "tags": [
+      "background",
+      "black",
+      "ML",
+      "machine learning",
+      "AI",
+      "negative example"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Plain black background\",\n  \"description\": \"This is just a plain black background for use with machine learning. I use it for negative examples.\",\n  \"tags\": [\"background\", \"black\", \"ML\", \"machine learning\", \"AI\", \"negative example\"]\n}\n```",
+  "usage": {
+    "input_tokens": 1122,
+    "output_tokens": 69,
+    "latency_s": 1.28
+  },
+  "num_images": 4,
+  "error": null
+}

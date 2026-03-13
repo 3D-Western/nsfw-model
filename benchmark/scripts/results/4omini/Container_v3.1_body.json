@@ -1,0 +1,23 @@
+{
+  "sample_id": "Container_v3.1_body",
+  "model": "openai/gpt-4o-mini",
+  "parsed": {
+    "title": "Simple Round Bowl",
+    "description": "This is a smooth, simplistic 3D model of a round bowl. It\u2019s got nice curvature and would be perfect for printing as a decorative piece or for serving snacks. The design is clean and modern, making it a great addition to any kitchen!",
+    "tags": [
+      "bowl",
+      "kitchen",
+      "decor",
+      "3D print",
+      "simple design"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Simple Round Bowl\",\n  \"description\": \"This is a smooth, simplistic 3D model of a round bowl. It\u2019s got nice curvature and would be perfect for printing as a decorative piece or for serving snacks. The design is clean and modern, making it a great addition to any kitchen!\",\n  \"tags\": [\"bowl\", \"kitchen\", \"decor\", \"3D print\", \"simple design\"]\n}\n```",
+  "usage": {
+    "input_tokens": 102100,
+    "output_tokens": 95,
+    "latency_s": 3.9
+  },
+  "num_images": 4,
+  "error": null
+}

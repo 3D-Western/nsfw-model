@@ -1,0 +1,9 @@
+{
+  "model": "google/gemini-2.0-flash-001",
+  "samples": 6,
+  "successes": 6,
+  "failures": 0,
+  "total_input_tokens": 6732,
+  "total_output_tokens": 534,
+  "avg_latency_s": 1.69
+}

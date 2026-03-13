@@ -1,0 +1,24 @@
+{
+  "sample_id": "Container_v3.1_body",
+  "model": "anthropic/claude-3-haiku",
+  "parsed": {
+    "title": "Sleek Chrome Piston",
+    "description": "Rendered images of a 3D model depicting a shiny, chrome-finished piston with a concentric ring design. The piston appears to be a high-quality, precision-engineered component, potentially suitable for use in an engine or other industrial application.",
+    "tags": [
+      "piston",
+      "chrome",
+      "metal",
+      "industrial",
+      "engineering",
+      "machinery"
+    ]
+  },
+  "raw_response": "{\n  \"title\": \"Sleek Chrome Piston\",\n  \"description\": \"Rendered images of a 3D model depicting a shiny, chrome-finished piston with a concentric ring design. The piston appears to be a high-quality, precision-engineered component, potentially suitable for use in an engine or other industrial application.\",\n  \"tags\": [\"piston\", \"chrome\", \"metal\", \"industrial\", \"engineering\", \"machinery\"]\n}",
+  "usage": {
+    "input_tokens": 2668,
+    "output_tokens": 105,
+    "latency_s": 4.15
+  },
+  "num_images": 4,
+  "error": null
+}

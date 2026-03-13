@@ -10,3 +10,5 @@ wheels/
 finetuning/.venv
 benchmark/.venv
 server/.venv
+
+benchmark/scripts/.env

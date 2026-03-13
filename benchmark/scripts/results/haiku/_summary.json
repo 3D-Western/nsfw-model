@@ -1,0 +1,9 @@
+{
+  "model": "anthropic/claude-3-haiku",
+  "samples": 6,
+  "successes": 6,
+  "failures": 0,
+  "total_input_tokens": 16008,
+  "total_output_tokens": 711,
+  "avg_latency_s": 3.61
+}

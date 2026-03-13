@@ -1,0 +1,23 @@
+{
+  "sample_id": "Headphone_Holder_Lower_v2",
+  "model": "google/gemini-2.0-flash-001",
+  "parsed": {
+    "title": "Black Background",
+    "description": "Just a plain black background.  Needed to test my dark mode thing and thought someone else might find it useful.",
+    "tags": [
+      "background",
+      "black",
+      "dark",
+      "test",
+      "simple"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Black Background\",\n  \"description\": \"Just a plain black background.  Needed to test my dark mode thing and thought someone else might find it useful.\",\n  \"tags\": [\"background\", \"black\", \"dark\", \"test\", \"simple\"]\n}\n```",
+  "usage": {
+    "input_tokens": 1122,
+    "output_tokens": 66,
+    "latency_s": 1.3
+  },
+  "num_images": 4,
+  "error": null
+}

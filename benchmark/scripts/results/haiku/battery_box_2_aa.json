@@ -1,0 +1,24 @@
+{
+  "sample_id": "battery_box_2_aa",
+  "model": "anthropic/claude-3-haiku",
+  "parsed": {
+    "title": "Compact Battery Holder",
+    "description": "This is a compact and versatile battery holder that can securely store and protect 4 AA batteries. The sleek design features a split compartment to keep the batteries organized and easy to access. Perfect for use in portable electronics, remote controls, and other devices that require reliable power on the go.",
+    "tags": [
+      "battery holder",
+      "AA batteries",
+      "storage",
+      "compact",
+      "electronics",
+      "portable"
+    ]
+  },
+  "raw_response": "{\n  \"title\": \"Compact Battery Holder\",\n  \"description\": \"This is a compact and versatile battery holder that can securely store and protect 4 AA batteries. The sleek design features a split compartment to keep the batteries organized and easy to access. Perfect for use in portable electronics, remote controls, and other devices that require reliable power on the go.\",\n  \"tags\": [\"battery holder\", \"AA batteries\", \"storage\", \"compact\", \"electronics\", \"portable\"]\n}",
+  "usage": {
+    "input_tokens": 2668,
+    "output_tokens": 111,
+    "latency_s": 2.66
+  },
+  "num_images": 4,
+  "error": null
+}

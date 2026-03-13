@@ -1,0 +1,24 @@
+{
+  "sample_id": "Headphone_Holder_Lower_v2",
+  "model": "anthropic/claude-3-haiku",
+  "parsed": {
+    "title": "Elegant Ceramic Vase",
+    "description": "This is a beautifully crafted ceramic vase with a sleek, minimalist design. The smooth curves and muted tones give it a modern, sophisticated look that would complement any decor. I think it would make a lovely centerpiece or accent piece in a living room or entryway. Let me know if you have any questions!",
+    "tags": [
+      "vase",
+      "ceramic",
+      "home decor",
+      "minimalist",
+      "modern",
+      "elegant"
+    ]
+  },
+  "raw_response": "{\n    \"title\": \"Elegant Ceramic Vase\",\n    \"description\": \"This is a beautifully crafted ceramic vase with a sleek, minimalist design. The smooth curves and muted tones give it a modern, sophisticated look that would complement any decor. I think it would make a lovely centerpiece or accent piece in a living room or entryway. Let me know if you have any questions!\",\n    \"tags\": [\"vase\", \"ceramic\", \"home decor\", \"minimalist\", \"modern\", \"elegant\"]\n}",
+  "usage": {
+    "input_tokens": 2668,
+    "output_tokens": 126,
+    "latency_s": 3.76
+  },
+  "num_images": 4,
+  "error": null
+}

@@ -1,0 +1,23 @@
+{
+  "sample_id": "Giraffe_PIP_Final",
+  "model": "openai/gpt-4o-mini",
+  "parsed": {
+    "title": "Stylish Planter",
+    "description": "Here's a cool planter I designed. It's got a sleek, modern look to fit any space. Perfect for your succulents or small plants. Can't wait to see it printed out and adding some greenery to my desk!",
+    "tags": [
+      "planter",
+      "home decor",
+      "design",
+      "3D print",
+      "plant lover"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Stylish Planter\",\n  \"description\": \"Here's a cool planter I designed. It's got a sleek, modern look to fit any space. Perfect for your succulents or small plants. Can't wait to see it printed out and adding some greenery to my desk!\",\n  \"tags\": [\"planter\", \"home decor\", \"design\", \"3D print\", \"plant lover\"]\n}\n```",
+  "usage": {
+    "input_tokens": 102100,
+    "output_tokens": 89,
+    "latency_s": 2.64
+  },
+  "num_images": 4,
+  "error": null
+}

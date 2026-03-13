@@ -1,0 +1,25 @@
+{
+  "sample_id": "HelloKitty",
+  "model": "anthropic/claude-3-haiku",
+  "parsed": {
+    "title": "Dark Minimalist Geometric Sculpture",
+    "description": "This striking 3D model features a simple yet captivating geometric design with clean lines and a sleek, all-black appearance. The design has a modern, minimalist aesthetic that would make a bold statement as a decorative sculpture or art piece. I think it would look great printed in a high-quality material like matte black resin or powder-coated metal.",
+    "tags": [
+      "3D sculpture",
+      "geometric design",
+      "minimalist",
+      "modern",
+      "black",
+      "decor",
+      "art"
+    ]
+  },
+  "raw_response": "{\n  \"title\": \"Dark Minimalist Geometric Sculpture\",\n  \"description\": \"This striking 3D model features a simple yet captivating geometric design with clean lines and a sleek, all-black appearance. The design has a modern, minimalist aesthetic that would make a bold statement as a decorative sculpture or art piece. I think it would look great printed in a high-quality material like matte black resin or powder-coated metal.\",\n  \"tags\": [\"3D sculpture\", \"geometric design\", \"minimalist\", \"modern\", \"black\", \"decor\", \"art\"]\n}",
+  "usage": {
+    "input_tokens": 2668,
+    "output_tokens": 136,
+    "latency_s": 4.32
+  },
+  "num_images": 4,
+  "error": null
+}

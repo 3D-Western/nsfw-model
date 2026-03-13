@@ -1,0 +1,24 @@
+{
+  "sample_id": "Giraffe_PIP_Final",
+  "model": "anthropic/claude-3-haiku",
+  "parsed": {
+    "title": "Dark Void",
+    "description": "This is a rendered image of a 3D model I created. It's a mysterious and ominous-looking void or portal, with a deep black background that conveys a sense of emptiness and uncertainty. I think it could make an interesting and thought-provoking 3D print.",
+    "tags": [
+      "abstract",
+      "dark",
+      "void",
+      "portal",
+      "mystery",
+      "sci-fi"
+    ]
+  },
+  "raw_response": "{\n  \"title\": \"Dark Void\",\n  \"description\": \"This is a rendered image of a 3D model I created. It's a mysterious and ominous-looking void or portal, with a deep black background that conveys a sense of emptiness and uncertainty. I think it could make an interesting and thought-provoking 3D print.\",\n  \"tags\": [\"abstract\", \"dark\", \"void\", \"portal\", \"mystery\", \"sci-fi\"]\n}",
+  "usage": {
+    "input_tokens": 2668,
+    "output_tokens": 109,
+    "latency_s": 2.35
+  },
+  "num_images": 4,
+  "error": null
+}

@@ -1,0 +1,26 @@
+{
+  "sample_id": "Container_v3.1_body",
+  "model": "google/gemini-2.0-flash-001",
+  "parsed": {
+    "title": "Clay Pigeon",
+    "description": "It's a clay pigeon model for printing. I tried to get the shape right.  Let me know if you have any suggestions!  Made it using Blender.",
+    "tags": [
+      "clay pigeon",
+      "skeet",
+      "shooting",
+      "trap",
+      "outdoors",
+      "sport",
+      "disc",
+      "target"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Clay Pigeon\",\n  \"description\": \"It's a clay pigeon model for printing. I tried to get the shape right.  Let me know if you have any suggestions!  Made it using Blender.\",\n  \"tags\": [\"clay pigeon\", \"skeet\", \"shooting\", \"trap\", \"outdoors\", \"sport\", \"disc\", \"target\"]\n}\n```",
+  "usage": {
+    "input_tokens": 1122,
+    "output_tokens": 89,
+    "latency_s": 2.16
+  },
+  "num_images": 4,
+  "error": null
+}

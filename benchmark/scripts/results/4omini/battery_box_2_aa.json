@@ -1,0 +1,23 @@
+{
+  "sample_id": "battery_box_2_aa",
+  "model": "openai/gpt-4o-mini",
+  "parsed": {
+    "title": "Battery Holder Design",
+    "description": "Here's a cool battery holder I designed for 18650 batteries. It's got space for two, with connectors on both ends. Thought it would be perfect for my DIY electronics projects. Easy to print and sturdy enough for everyday use!",
+    "tags": [
+      "battery holder",
+      "18650",
+      "DIY",
+      "electronics",
+      "3D printing"
+    ]
+  },
+  "raw_response": "```json\n{\n  \"title\": \"Battery Holder Design\",\n  \"description\": \"Here's a cool battery holder I designed for 18650 batteries. It's got space for two, with connectors on both ends. Thought it would be perfect for my DIY electronics projects. Easy to print and sturdy enough for everyday use!\",\n  \"tags\": [\"battery holder\", \"18650\", \"DIY\", \"electronics\", \"3D printing\"]\n}\n```",
+  "usage": {
+    "input_tokens": 102100,
+    "output_tokens": 89,
+    "latency_s": 2.5
+  },
+  "num_images": 4,
+  "error": null
+}

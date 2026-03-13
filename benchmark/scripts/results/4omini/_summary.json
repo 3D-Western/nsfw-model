@@ -1,0 +1,9 @@
+{
+  "model": "openai/gpt-4o-mini",
+  "samples": 6,
+  "successes": 6,
+  "failures": 0,
+  "total_input_tokens": 612600,
+  "total_output_tokens": 554,
+  "avg_latency_s": 2.78
+}
