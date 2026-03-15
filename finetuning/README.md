@@ -1,12 +1,24 @@
-# 3DW-NSFW model
 
-This repo contains the source code used to benchmark, fine tune, and host the 3D Western Morrissette Maker Space NSFW AI detection model.
+# Installation
+1. Clone the repository
+    git clone 
 
-# Setup 
+2. Create a Python virtual environment
+    python -m venv .venv 
+    source .venv/bin/activate
 
-Requirements: `uv` installed and Bash for running benchmarking scripts (Windows developers can use WSL).
+3. Install dependencies
+    pip install -r requirements.txt
 
-To set up for a specific benchmarking, fine tuning or hosting, `cd` into the directory in this monorepo, 
-and run `uv venv && source .venv/bin/activate && uv pip install -r requirements.txt`.
+# Configuration
+Models and training parameters are defined in the configs folder.
 
-Please refer to the corresponding directories' READMEs for more.
+# Running Fine-tuning 
+To run the full pipeline:
+    bash run_finetuning.sh
+
+This script performs the following steps:
+1. Prepare the dataset
+2. Load the selected model
+3. Fine-tune the model
+4. Evaluate performance
