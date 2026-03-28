@@ -10,3 +10,4 @@ wheels/
 finetuning/.venv
 benchmark/.venv
 server/.venv
+data-pushing/.venv

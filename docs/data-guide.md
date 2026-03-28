@@ -3,23 +3,53 @@
 This guide covers two workflows:
 
 1. The scraping team uploads raw STL samples and upload metadata to S3.
-2. The preprocessing and training team builds a canonical local snapshot and tracks the data directories with DVC.
+2. The preprocessing and training team builds local snapshot and tracks the data directories with DVC.
 
-## Overview
+## Overview for 1 (Pushing data to S3)
 
-1. Scraping team uploads raw files to `s3://<bucket>/landing/raw/v1/...`.
-2. Each upload run also writes per-sample metadata and a per-run JSONL shard to S3 for traceability.
-3. A maintainer validates the uploaded samples and materializes a canonical local snapshot under `data/raw/v1`.
-4. The canonical data directories are tracked with DVC and pushed to the DVC remote in `s3://<bucket>/dvc-cache`.
-5. JSONL manifests remain human-readable metadata and are stored in Git and/or S3, but are not DVC-tracked by default.
+1. scraping team uploads raw samples and commits each of their JSONL to GitHub
+2. VP then creates the master JSONL index and checks for duplicates:
+    1. Aggregate shards
+        - Collect all per-run JSONL shards into one working set
+        - Validate schema for every row
+    2. Check `sample_id` uniqueness
+        - Verify every `sample_id` is unique across all rows
+        - If any duplicate `sample_id` exists, fail the aggregation and investigate
+        - Do not auto-delete here
+    3. Group by `sample_fingerprint`
+        - Group rows by `sample_fingerprint`
+        - Any group with more than one row is an exact-content duplicate set
+        - Review each group and choose one row to keep
+    4. Remove confirmed duplicates
+        - Remove the non-kept rows from the master JSONL
+        - Delete the corresponding duplicate sample prefixes from S3
+        - Record what was removed in an audit report
+    5. Publish master JSONL
+        - Write the final deduped `raw_samples.v1.jsonl` using only kept rows
+
+    And sets up and pushes master JSONL to Git (no DVC yet)
+
+3. team can then pull the raw data from S3 using JSONL
+
+## Overview for 2 (Preprocessing and training)
+
+1. Team uses the master JSONL from Git to know which raw samples to pull from S3
+2. Team downloads the raw STL data directly from S3 as needed
+3. One designated person builds the processed dataset locally
+4. That person initializes DVC for the processed dataset only
+5. They commit the .dvc files to Git
+6. They push the processed dataset to S3 through DVC
+7. Other teammates pull:
+   - metadata from Git
+   - processed dataset from S3 through DVC
 
 ## Requirements
 
 - [dvc](https://dvc.org/)
-- AWS credentials configured locally
-- Python environment for ingest and validation scripts
+- AWS credentials (Josh)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
-## Finalized Naming Conventions
+## Definitions for S3
 
 - `dataset_version`: short dataset lineage such as `v1`, `v2`
 - `sample_id`: ULID with `smpl_` prefix, for example `smpl_01JQXYZABC123`
@@ -29,9 +59,7 @@ This guide covers two workflows:
 - `source_project_path`: source-relative path such as `guns/glock_frame_bundle`
 - `sample_fingerprint`: deterministic hash of the sorted `(relative_path, sha256)` pairs for all files in the sample
 
-These names should be used consistently in S3 paths, upload manifests, JSONL rows, and local validation tooling.
-
-## Finalized S3 Layout
+## Proposed S3 Layout
 
 ```text
 s3://<bucket>/
@@ -71,6 +99,8 @@ Design choices:
 - `dvc-cache/` is reserved for DVC object storage and should not be mixed with human-readable data.
 
 ### S3 Bucket Configuration
+
+Make sure that the following are done before pushing to S3: 
 
 - Bucket owner enforced with ACLs disabled
 - Versioning enabled
@@ -123,11 +153,10 @@ The same schema should be used for:
 
 Field notes:
 
-- `dataset_version` keeps lineage explicit and avoids guessing from the path alone.
 - `sample_id` is generated once and never reused.
-- `source_category_hint` preserves scrape organization without implying the final label.
+- `source_category_hint` is for saving scrape organization without implying the final label.
 - `source_project_path` is the source-relative path under the local ingest root.
-- `sample_fingerprint` supports duplicate detection across samples even when filenames differ.
+- `sample_fingerprint` is used for duplicate detection across samples even when filenames differ.
 - `file_count` should equal `len(files)`.
 - `files` must be sorted by `relative_path` before fingerprinting and writing manifests.
 - `ingest_status` starts as `uploaded`; later pipeline states can be added if needed.
@@ -147,7 +176,7 @@ The initial local layout should look like this:
         └── body.stl
 ```
 
-Rules:
+Constraints:
 
 - one `project_folder` equals one sample
 - all `.stl` files in a project folder stay together as one sample
@@ -162,11 +191,11 @@ Each teammate should prepare data as:
 <root>/<source_category_hint>/<project_folder>/*.stl
 ```
 
-For `v1`, a sample folder may contain one or more `.stl` files, but nested subdirectories inside a sample are not supported.
+For `v1`, a sample folder may contain one or more `.stl` files, but nested subdirectories inside a sample are not supported. A single sample folder can have multiple STL files but not nested folders.
 
 ### Pre-upload Validation
 
-Before upload, the ingest script should check:
+Before upload, the ingest script checks:
 
 - sample folder contains at least one `.stl`
 - every file has `.stl` extension
@@ -177,17 +206,15 @@ Before upload, the ingest script should check:
 
 ### Upload Flow
 
-Each teammate runs one command, for example:
+Each teammate runs one command:
 
 ```bash
-python scripts/ingest_upload.py \
+uv run python scripts/ingest_upload.py \
   --member alice \
   --root /path/to/local/data \
   --bucket <bucket> \
   --dataset-version v1
 ```
-
-The script should:
 
 1. traverse the local folder tree
 2. generate a new `sample_id` for each valid sample
@@ -281,7 +308,7 @@ scripts/
 └── render_openscad.py
 ```
 
-## Finalized `v1` Sample Shape
+## `v1` Sample Shape In Bucket 
 
 For `v1`, a sample is one project folder containing one or more `.stl` files directly inside the folder:
 
